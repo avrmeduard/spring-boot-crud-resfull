@@ -22,7 +22,9 @@ public class BookService {
         return repository.saveAll(books);
     }
 
-
+    public List<Book> getBooks() {
+        return repository.findAll();
+    }
 
 
 
