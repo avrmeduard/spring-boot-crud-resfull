@@ -30,6 +30,12 @@ public class BookService {
         return repository.findById(id).orElse(null);
     }
 
+    public Book getBookByName(String name) {
+        return repository.findByName(name);
+    }
+
+
+
 
 
 
