@@ -26,6 +26,9 @@ public class BookService {
         return repository.findAll();
     }
 
+    public Book getBookById(int id) {
+        return repository.findById(id).orElse(null);
+    }
 
 
 
