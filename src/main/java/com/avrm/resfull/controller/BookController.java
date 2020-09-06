@@ -20,6 +20,9 @@ public class BookController {
         return service.saveBook(book);
     }
 
-
+    @PostMapping("/addBooks")
+    public List<Book> addBook(@RequestBody List<Book> books) {
+        return service.saveBooks(books);
+    }
 
 }
