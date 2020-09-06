@@ -25,4 +25,9 @@ public class BookController {
         return service.saveBooks(books);
     }
 
+    public List<Book> findAllBooks() {
+        return service.getBooks();
+    }
+
+
 }
