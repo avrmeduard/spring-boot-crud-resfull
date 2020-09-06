@@ -12,8 +12,9 @@ public class BookService {
     private BookRepository repository;
 
 
-
-
+    public Book saveBook(Book book) {
+        return repository.save(book);
+    }
 
 
 }
