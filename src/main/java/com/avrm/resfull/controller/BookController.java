@@ -15,6 +15,11 @@ public class BookController {
     @Autowired
     private BookService service;
 
+    @PostMapping("/addBook")
+    public Book addBook(@RequestBody Book book) {
+        return service.saveBook(book);
+    }
+
 
 
 }
