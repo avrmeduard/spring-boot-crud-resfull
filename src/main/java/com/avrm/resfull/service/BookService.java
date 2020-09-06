@@ -40,7 +40,19 @@ public class BookService {
         return "Book whit id "+id+" removed";
     }
 
+    public Book bookUpdate(Book book) {
+        Book existingBook = repository.findById(book.getBookId()).orElse(null);
 
+        existingBook.setTitle(book.getTitle());
+        existingBook.setAuthor(book.getAuthor());
+        existingBook.setPublisher(book.getPublisher());
+        existingBook.setIsbn(book.getIsbn());
+        existingBook.setNumberOfPages(book.getNumberOfPages());
+        existingBook.setLanguage(book.getLanguage());
+        existingBook.setGenre(book.getGenre());
+
+        return repository.save(existingBook);
+    }
 
 
 
